@@ -1,0 +1,418 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray-light: #f9f9f9;
+$color-gray-hover: #e0e0e0;
+$color-gray-active: #c0c0c0;
+$font-family: Arial, sans-serif;
+
+$padding-small: 8px;
+$padding-medium: 16px;
+$padding-large: 32px;
+
+$margin-small: 8px;
+$margin-medium: 16px;
+$margin-large: 32px;
+
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 18px;
+$font-size-lg: 22px;
+$font-size-xl: 26px;
+$font-size-xxl: 28px;
+
+$transition-speed: 0.25s;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $color-gray-light;
+    color: $color-black;
+    line-height: 24px;
+    font-size: $font-size-sm;
+}
+
+.header-nav {
+    background-color: $color-black;
+    padding: $padding-medium;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h2 {
+    color: $color-white;
+    font-weight: 900;
+    font-size: 30px;
+    padding-left: $padding-medium;
+    letter-spacing: 1px;
+}
+
+div ul {
+    list-style: none;
+    display: flex;
+    gap: $margin-medium;
+    flex-wrap: wrap;
+}
+
+div ul li a {
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: $padding-small $padding-medium;
+    border-radius: 6px;
+    transition: background-color $transition-speed, color $transition-speed;
+    display: inline-block;
+}
+
+div ul li a:hover {
+    background-color: $color-gray-hover;
+    color: $color-black;
+}
+
+div ul li a:active {
+    background-color: $color-gray-active;
+    color: $color-black;
+}
+
+div a button {
+    background-color: $color-gray-hover;
+    color: $color-black;
+    border: none;
+    padding: $padding-small $padding-large;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color $transition-speed, color $transition-speed, box-shadow $transition-speed;
+}
+
+div a button:hover {
+    background-color: $color-gray-active;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+div a button:active {
+    background-color: $color-black;
+    color: $color-white;
+    box-shadow: none;
+}
+
+section {
+    background-color: $color-white;
+    border-radius: 12px;
+    padding: $padding-large $padding-medium;
+    margin: $margin-large auto;
+    max-width: 1200px;
+    border: 1px solid $color-gray-hover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: grid;
+    gap: $margin-medium;
+    transition: box-shadow $transition-speed;
+}
+
+section:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 900;
+    border-bottom: 2px solid $color-black;
+    padding-bottom: 8px;
+    letter-spacing: 0.8px;
+    margin-bottom: $margin-medium;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: $margin-small;
+    color: $color-black;
+}
+
+p {
+    font-size: 18px;
+    color: $color-black;
+    line-height: 1.5;
+    margin-bottom: $margin-medium;
+}
+
+a button {
+    background-color: $color-gray-hover;
+    border: none;
+    border-radius: 8px;
+    padding: $padding-small $padding-medium;
+    color: $color-black;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: background-color $transition-speed, color $transition-speed, box-shadow $transition-speed;
+}
+
+a button:hover {
+    background-color: $color-gray-active;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+a button:active {
+    background-color: $color-black;
+    color: $color-white;
+    box-shadow: none;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $margin-medium;
+}
+
+label {
+    font-weight: 700;
+    color: $color-black;
+    margin-bottom: $margin-small;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid $color-gray-hover;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: $font-family;
+    color: $color-black;
+    background-color: $color-white;
+    transition: border-color $transition-speed, box-shadow $transition-speed;
+    resize: vertical;
+    min-height: 40px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border-color: $color-gray-active;
+    box-shadow: 0 0 6px $color-gray-active;
+}
+
+input[type="text"]:active,
+input[type="email"]:active,
+textarea:active {
+    border-color: $color-black;
+}
+
+button {
+    align-self: flex-start;
+    background-color: $color-gray-hover;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 36px;
+    cursor: pointer;
+    font-weight: 700;
+    color: $color-black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: background-color $transition-speed, color $transition-speed, box-shadow $transition-speed;
+}
+
+button:hover {
+    background-color: $color-gray-active;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+button:active {
+    background-color: $color-black;
+    color: $color-white;
+    box-shadow: none;
+}
+
+footer {
+    background-color: $color-black;
+    color: $color-white;
+    text-align: center;
+    padding: $padding-medium 0;
+    font-weight: 700;
+    font-size: $font-size-sm;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: $margin-medium 0;
+    border-radius: 12px;
+    border: 1px solid $color-gray-hover;
+    transition: border-color $transition-speed, box-shadow $transition-speed;
+    object-fit: cover;
+    max-height: 320px;
+    justify-self: center;
+}
+
+img:hover {
+    border-color: $color-gray-active;
+    box-shadow: 0 0 10px $color-gray-active;
+}
+
+img:active {
+    border-color: $color-black;
+    box-shadow: none;
+}
+
+article {
+    margin-bottom: $margin-large;
+    display: grid;
+    gap: 8px;
+}
+
+article h3 {
+    margin-bottom: $margin-small;
+    font-weight: 800;
+    color: $color-black;
+    letter-spacing: 0.4px;
+}
+
+article p {
+    margin-bottom: $margin-medium;
+    color: $color-black;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: $margin-large;
+    color: $color-black;
+    transition: color $transition-speed;
+    letter-spacing: 1.2px;
+}
+
+h1:hover {
+    color: $color-gray-hover;
+}
+
+h1:active {
+    color: $color-gray-active;
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        font-size: $font-size-xs;
+        padding: $padding-small;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div ul {
+        flex-direction: column;
+        gap: $margin-small;
+        width: 100%;
+    }
+
+    div ul li {
+        width: 100%;
+    }
+
+    div ul li a {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+        border-radius: 6px;
+    }
+
+    section {
+        margin: 16px 8px;
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    img {
+        max-height: 240px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        font-size: $font-size-sm;
+    }
+
+    section {
+        border-radius: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: $font-size-md;
+    }
+
+    img {
+        max-height: 280px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        font-size: $font-size-lg;
+    }
+
+    section {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: $padding-large;
+    }
+
+    img {
+        max-height: 320px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: $font-size-xl;
+    }
+
+    section {
+        max-width: 1140px;
+    }
+
+    img {
+        max-height: 350px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        font-size: $font-size-xxl;
+    }
+
+    section {
+        max-width: 1320px;
+    }
+
+    img {
+        max-height: 400px;
+    }
+}
